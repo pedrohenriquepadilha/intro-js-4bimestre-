@@ -1,11 +1,18 @@
-const inputNome = document.querySelector("#nome")
-const inputIdade = document.querySelector("#idade")
-const Formulario = document.querySelector("#formulario")
-const Resultado = document.querySelector("#resultado")
+const inputNome = document.querySelector("#nome");
+const inputIdade = document.querySelector("#idade");
+const Formulario = document.querySelector("#formulario");
+const Resultado = document.querySelector("#resultado");
 
-formulario.addEventListener('submit', function(event) {
-   const nome = inputNome.value
-    const idade = inputIdade.value
+Formulario.addEventListener('submit', function(event) {
+   const nome = inputNome.value;
+    const idade = inputIdade.value;
 
-    alert(nome + idade)
-})
+   if (idade > 18) {
+    Resultado.textContent = "olá, " + nome + "! você é maior de idade.";  
+} else {
+    Resultado.textContent = `olá, ${nome}! você é menor de idade.`;
+    resultado.classlist.add("alert-danger");
+}
+
+resultado.classList.remove("d-none");
+});
