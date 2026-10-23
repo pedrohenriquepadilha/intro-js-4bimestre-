@@ -11,8 +11,8 @@ Formulario.addEventListener('submit', function(event) {
     Resultado.textContent = "olá, " + nome + "! você é maior de idade.";  
 } else {
     Resultado.textContent = `olá, ${nome}! você é menor de idade.`;
-    resultado.classlist.add("alert-danger");
+    Resultado.classList.add("alert-danger");
 }
 
-resultado.classList.remove("d-none");
+Resultado.classList.remove("d-none");
 });
